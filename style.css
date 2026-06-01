@@ -1,0 +1,189 @@
+/*  Typo
+----------------------------------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a:link, a:visited
+{
+    text-decoration: underline;
+    color:#000;
+}
+a:active { 	text-decoration: underline; }
+a:hover { text-decoration:none; }
+
+
+h1 { font:bold 18px/140% "Trebuchet MS", Verdana, sans-serif; }
+h2 { font:bold 14px/140% "Trebuchet MS", Verdana, sans-serif; }
+
+p {	font: 11px/140% Poppins, Verdana, Geneva, Arial, Helvetica, sans-serif;}
+
+/*  Layout
+----------------------------------------------- */
+
+body {
+    background-color: #213555;
+    background-image: linear-gradient(160deg, #213555 0%, #00122b 54%, #0e8bb7 100%);
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 100vw;
+    background-attachment: scroll, fixed;
+    padding:35px 0 0 0;
+    margin:0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    height: 100vh;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: fit-content
+}
+
+.hero h1 {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    padding: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.image-icon {
+    width: 80px; /* Ancho de la imagen */
+    height: 80px; /* Alto de la imagen */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Alinear los botones en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: fit-content; /* Altura del contenedor igual a la ventana */
+}
+
+.btnCardar {
+    display: flex;
+    flex-direction: column; /* Alinear el botón y la imagen en columna */
+    justify-content: space-between; /* Centrar horizontalmente */
+    align-items: center ; /* Centrar verticalmente */
+    width: 320px;
+    max-width: 320px; /* Ancho máximo del botón */
+    height: 300px; /* Altura del contenedor igual a la ventana */
+    margin: 24px; /* Espaciado entre los botones */
+    border-radius: 8px;
+    border: solid 2px #0e8bb7;
+}
+
+.sistema {
+    background-color: #1a408a;
+}
+
+.helpdesk {
+    background-color: #1a778a;    
+}
+.image-iconCard {
+    margin-top: 16px; /* Espaciado entre botón y PNG */
+    width: 64px; /* Ancho de la imagen */
+    height: 64px; /* Alto de la imagen */
+    background-color: #305aad;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+.person-icon {
+    background-color: #305aad;
+}
+
+.help-icon {
+    background-color: #37a2b7;
+}
+
+.btnCardar h1 {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 16px;
+    padding: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.cardText {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.redirect-btn {
+    background-color: #0e8bb7; /* Color verde */
+    color: white; /* Color de texto */
+    padding: 8px 16px; /* Tamaño del botón */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Sin subrayado */
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    width: 100% ;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px; /* Tamaño de fuente */
+    letter-spacing: 2px;
+    cursor: pointer; /* Cursor de mano */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s ease; /* Animación */
+    border-radius: 0 0 4px 4px;
+}
+
+.redirect-btn img {
+    margin-right: 8px; /* Espaciado entre la imagen y el texto */
+    width: 20px; /* Ancho de la imagen */
+    height: 20px; /* Alto de la imagen */
+}
+
+.redirect-btn:hover {
+        opacity: .9;
+    box-shadow: 0 0 6px 5px #0092ff70;
+}
+
+
+@media (min-width: 768px) {
+    .button-container {
+        flex-direction: row; /* Alinear los botones en fila */
+        height: fit-content; /* Aumentar la altura del contenedor en pantallas más grandes */
+    }
+
+    .redirect-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .image-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .redirect-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .image-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
