@@ -222,6 +222,95 @@ body {
     box-shadow: 0 0 6px 5px #0092ff70;
 }
 
+.footer {
+    background-color: #061a42c3;
+    width: 100vw;
+    border-top: solid 1px #1e90bac9;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-section-info {
+    width: 100vw;
+  border-top: solid 1px #1e90bac9;
+}
+.footer-section-info p {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.footer-section-important {
+    width: 60vw;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around; 
+    text-align: center;
+    color: white;
+   
+}
+
+.footer-seguridad {
+    width: 280px;
+    margin-left: 0px;
+    color: white;
+    text-align: left;
+  
+}
+.footer-seguridad p {
+    font-size: 12px;
+}
+.footer-seguridad img {
+    width: 44px; /* Ancho de la imagen */
+    height: 44px; /* Alto de la imagen */
+    float: left; /* Alinear la imagen a la izquierda */
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    margin-top: 7px;
+}
+
+.footer-avisos {
+    width: 280px;
+    margin-left: 0px;
+    color: white;
+    text-align: left;
+}
+
+.footer-avisos p  {
+   text-align: left;
+   font-size: 12px;
+}
+
+.footer-avisos img{
+    width: 44px; /* Ancho de la imagen */
+    height: 44px; /* Alto de la imagen */
+    float: left; /* Alinear la imagen a la izquierda */
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    margin-top: 7px;
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background-color: #1e90bac9;
+    margin: 7px 0;
+}
+
+
+
 
 @media (min-width: 768px) {
     .button-container {
