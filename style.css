@@ -12,6 +12,7 @@
     --accent-color: #37a2b7;
     --text-color: #e3e3e3;
     --background-color: #213555;
+    --plast-bg: #061a42c3;
 }
 
 a:link, a:visited
@@ -38,12 +39,66 @@ body {
     background-repeat: repeat, no-repeat;
     background-size: auto, 100vw;
     background-attachment: scroll, fixed;
-    padding:35px 0 0 0;
-    margin:0;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
     height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: fit-content;
+    width: 100vw;
+    margin-bottom: 24px; /* Espaciado entre el header y el contenido */
+    background-color: var(--plast-bg);
+}
+
+.headerBanner {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: space-between; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 80vw;
+    margin: 16px 0; /* Espaciado entre el header y el contenido */
+}
+
+.headerTile {
+    color: var(--primary-color);
+    padding: 2px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.headerTile img {
+    width: 160px; /* Ancho de la imagen */
+}
+
+.headerTile h1 {
+    font-size: 12px;
+    text-align: right;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+.headerText img {
+    width: 48px; /* Ancho de la imagen */
+    margin-right: 8px; /* Espaciado entre la imagen y el texto */
+}
+
+.headerText span {
+    width: 30vw;
 }
 
 .hero {
