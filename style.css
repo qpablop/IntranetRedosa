@@ -6,6 +6,15 @@
     margin: 0;
 }
 
+:root {
+    --primary-color: #0e8bb7;
+    --secondary-color: #1a408a;
+    --accent-color: #37a2b7;
+    --text-color: #e3e3e3;
+    --background-color: #213555;
+    --plast-bg: #061a42c3;
+}
+
 a:link, a:visited
 {
     text-decoration: underline;
@@ -24,18 +33,72 @@ p {	font: 11px/140% Poppins, Verdana, Geneva, Arial, Helvetica, sans-serif;}
 ----------------------------------------------- */
 
 body {
-    background-color: #213555;
-    background-image: linear-gradient(160deg, #213555 0%, #00122b 54%, #0e8bb7 100%);
+    background-color: var(--background-color);
+    background-image: linear-gradient(160deg, var(--background-color) 0%, #00122b 54%, var(--primary-color) 100%);
     background-position: 0 0, 50%;
     background-repeat: repeat, no-repeat;
     background-size: auto, 100vw;
     background-attachment: scroll, fixed;
-    padding:35px 0 0 0;
-    margin:0;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
     height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: fit-content;
+    width: 100vw;
+    margin-bottom: 24px; /* Espaciado entre el header y el contenido */
+    background-color: var(--plast-bg);
+}
+
+.headerBanner {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: space-between; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 80vw;
+    margin: 16px 0; /* Espaciado entre el header y el contenido */
+}
+
+.headerTile {
+    color: var(--primary-color);
+    padding: 2px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.headerTile img {
+    width: 160px; /* Ancho de la imagen */
+}
+
+.headerTile h1 {
+    font-size: 12px;
+    text-align: right;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: row; /* Alinear el contenido en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+.headerText img {
+    width: 48px; /* Ancho de la imagen */
+    margin-right: 8px; /* Espaciado entre la imagen y el texto */
+}
+
+.headerText span {
+    width: 30vw;
 }
 
 .hero {
@@ -47,7 +110,7 @@ body {
 }
 
 .hero h1 {
-    color: white;
+    color: var(--text-color);
     font-size: 48px;
     text-align: center;
     padding: 8px;
@@ -78,21 +141,22 @@ body {
     height: 300px; /* Altura del contenedor igual a la ventana */
     margin: 24px; /* Espaciado entre los botones */
     border-radius: 8px;
-    border: solid 2px #0e8bb7;
-}
-
-.sistema {
-    background-color: #1a408a;
+    border: solid 2px var(--primary-color);
 }
 
 .helpdesk {
-    background-color: #1a778a;    
+    background-color: #2593a9;    
 }
+
+.sistema {
+    background-color: var(--secondary-color);
+}
+
+
 .image-iconCard {
     margin-top: 16px; /* Espaciado entre botón y PNG */
     width: 64px; /* Ancho de la imagen */
     height: 64px; /* Alto de la imagen */
-    background-color: #305aad;
     border-radius: 50px;
     padding: 8px;
 }
@@ -102,11 +166,11 @@ body {
 }
 
 .help-icon {
-    background-color: #37a2b7;
+    background-color: var(--accent-color);
 }
 
 .btnCardar h1 {
-    color: white;
+    color: var(--text-color);
     font-size: 32px;
     text-align: center;
     margin-top: 16px;
@@ -117,7 +181,7 @@ body {
 
 .cardText {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     text-align: center;
     padding: 16px;
@@ -126,8 +190,8 @@ body {
 }
 
 .redirect-btn {
-    background-color: #0e8bb7; /* Color verde */
-    color: white; /* Color de texto */
+    background-color: var(--primary-color);
+    color: var(--text-color); /* Color de texto */
     padding: 8px 16px; /* Tamaño del botón */
     text-align: center; /* Centrar el texto */
     text-decoration: none; /* Sin subrayado */
@@ -157,6 +221,95 @@ body {
         opacity: .9;
     box-shadow: 0 0 6px 5px #0092ff70;
 }
+
+.footer {
+    background-color: #061a42c3;
+    width: 100vw;
+    border-top: solid 1px #1e90bac9;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-section-info {
+    width: 100vw;
+  border-top: solid 1px #1e90bac9;
+}
+.footer-section-info p {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.footer-section-important {
+    width: 60vw;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around; 
+    text-align: center;
+    color: white;
+   
+}
+
+.footer-seguridad {
+    width: 280px;
+    margin-left: 0px;
+    color: white;
+    text-align: left;
+  
+}
+.footer-seguridad p {
+    font-size: 12px;
+}
+.footer-seguridad img {
+    width: 44px; /* Ancho de la imagen */
+    height: 44px; /* Alto de la imagen */
+    float: left; /* Alinear la imagen a la izquierda */
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    margin-top: 7px;
+}
+
+.footer-avisos {
+    width: 280px;
+    margin-left: 0px;
+    color: white;
+    text-align: left;
+}
+
+.footer-avisos p  {
+   text-align: left;
+   font-size: 12px;
+}
+
+.footer-avisos img{
+    width: 44px; /* Ancho de la imagen */
+    height: 44px; /* Alto de la imagen */
+    float: left; /* Alinear la imagen a la izquierda */
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    margin-top: 7px;
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background-color: #1e90bac9;
+    margin: 7px 0;
+}
+
+
 
 
 @media (min-width: 768px) {
