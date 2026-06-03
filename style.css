@@ -1,253 +1,376 @@
 /*  Typo
 ----------------------------------------------- */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
-    --primary-color: #0e8bb7;
-    --secondary-color: #1a408a;
-    --accent-color: #37a2b7;
-    --text-color: #e3e3e3;
-    --background-color: #213555;
-    --plast-bg: #061a42c3;
+  --primary-color: #0e8bb7;
+  --secondary-color: #1a408a;
+  --accent-color: #37a2b7;
+  --text-color: #e3e3e3;
+  --background-color: #213555;
+  --plast-bg: #061a42c3;
+  --borderline-color: #1e90bac9;
 }
 
-a:link, a:visited
-{
-    text-decoration: underline;
-    color:#000;
+a:link,
+a:visited {
+  text-decoration: underline;
+  color: #000;
 }
-a:active { 	text-decoration: underline; }
-a:hover { text-decoration:none; }
+a:active {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
 
+h1 {
+  font:
+    bold 18px/140% "Trebuchet MS",
+    Verdana,
+    sans-serif;
+}
+h2 {
+  font:
+    bold 14px/140% "Trebuchet MS",
+    Verdana,
+    sans-serif;
+}
 
-h1 { font:bold 18px/140% "Trebuchet MS", Verdana, sans-serif; }
-h2 { font:bold 14px/140% "Trebuchet MS", Verdana, sans-serif; }
-
-p {	font: 11px/140% Poppins, Verdana, Geneva, Arial, Helvetica, sans-serif;}
+p {
+  font:
+    11px/140% Poppins,
+    Verdana,
+    Geneva,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
 
 /*  Layout
 ----------------------------------------------- */
 
 body {
-    background-color: var(--background-color);
-    background-image: linear-gradient(160deg, var(--background-color) 0%, #00122b 54%, var(--primary-color) 100%);
-    background-position: 0 0, 50%;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, 100vw;
-    background-attachment: scroll, fixed;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    height: 100vh;
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+    160deg,
+    var(--background-color) 0%,
+    #00122b 54%,
+    var(--primary-color) 100%
+  );
+  background-position:
+    0 0,
+    50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100vw;
+  background-attachment: scroll, fixed;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .header {
-    display: flex;
-    flex-direction: row; /* Alinear el contenido en fila */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: fit-content;
-    width: 100vw;
-    margin-bottom: 24px; /* Espaciado entre el header y el contenido */
-    background-color: var(--plast-bg);
+  display: flex;
+  flex-direction: row; /* Alinear el contenido en fila */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: fit-content;
+  width: 100vw;
+  margin-bottom: 24px; /* Espaciado entre el header y el contenido */
+  background-color: var(--plast-bg);
+  border-bottom: solid 1px var(--borderline-color);
 }
 
 .headerBanner {
-    display: flex;
-    flex-direction: row; /* Alinear el contenido en fila */
-    justify-content: space-between; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    width: 80vw;
-    margin: 16px 0; /* Espaciado entre el header y el contenido */
+  display: flex;
+  flex-direction: row; /* Alinear el contenido en fila */
+  justify-content: space-between; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  width: 80vw;
+  margin: 16px 0; /* Espaciado entre el header y el contenido */
 }
 
 .headerTile {
-    color: var(--primary-color);
-    padding: 2px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
+  color: var(--primary-color);
+  padding: 2px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
 }
 
 .headerTile img {
-    width: 160px; /* Ancho de la imagen */
+  width: 160px; /* Ancho de la imagen */
 }
 
 .headerTile h1 {
-    font-size: 12px;
-    text-align: right;
+  font-size: 12px;
+  text-align: right;
 }
 
 .headerText {
-    display: flex;
-    flex-direction: row; /* Alinear el contenido en fila */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    color: var(--text-color);
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
+  display: flex;
+  flex-direction: row; /* Alinear el contenido en fila */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
 }
 
 .headerText img {
-    width: 48px; /* Ancho de la imagen */
-    margin-right: 8px; /* Espaciado entre la imagen y el texto */
+  width: 48px; /* Ancho de la imagen */
+  margin-right: 8px; /* Espaciado entre la imagen y el texto */
 }
 
 .headerText span {
-    width: 30vw;
+  width: 30vw;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column; /* Alinear el contenido en columna */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: fit-content
+  display: flex;
+  flex-direction: column; /* Alinear el contenido en columna */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: fit-content;
 }
 
 .hero h1 {
-    color: var(--text-color);
-    font-size: 48px;
-    text-align: center;
-    padding: 8px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
+  color: var(--text-color);
+  font-size: 48px;
+  text-align: center;
+  padding: 8px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
 }
 
 .image-icon {
-    width: 80px; /* Ancho de la imagen */
-    height: 80px; /* Alto de la imagen */
+  width: 80px; /* Ancho de la imagen */
+  height: 80px; /* Alto de la imagen */
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column; /* Alinear los botones en fila */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: fit-content; /* Altura del contenedor igual a la ventana */
+  display: flex;
+  flex-direction: column; /* Alinear los botones en fila */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: fit-content; /* Altura del contenedor igual a la ventana */
 }
 
 .btnCardar {
-    display: flex;
-    flex-direction: column; /* Alinear el botón y la imagen en columna */
-    justify-content: space-between; /* Centrar horizontalmente */
-    align-items: center ; /* Centrar verticalmente */
-    width: 320px;
-    max-width: 320px; /* Ancho máximo del botón */
-    height: 300px; /* Altura del contenedor igual a la ventana */
-    margin: 24px; /* Espaciado entre los botones */
-    border-radius: 8px;
-    border: solid 2px var(--primary-color);
+  display: flex;
+  flex-direction: column; /* Alinear el botón y la imagen en columna */
+  justify-content: space-between; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  width: 320px;
+  max-width: 320px; /* Ancho máximo del botón */
+  height: 300px; /* Altura del contenedor igual a la ventana */
+  margin: 24px; /* Espaciado entre los botones */
+  border-radius: 8px;
+  border: solid 2px var(--primary-color);
 }
 
 .helpdesk {
-    background-color: #2593a9;    
+  background-color: #2593a9;
 }
 
 .sistema {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
-
 .image-iconCard {
-    margin-top: 16px; /* Espaciado entre botón y PNG */
-    width: 64px; /* Ancho de la imagen */
-    height: 64px; /* Alto de la imagen */
-    border-radius: 50px;
-    padding: 8px;
+  margin-top: 16px; /* Espaciado entre botón y PNG */
+  width: 64px; /* Ancho de la imagen */
+  height: 64px; /* Alto de la imagen */
+  border-radius: 50px;
+  padding: 8px;
 }
 
 .person-icon {
-    background-color: #305aad;
+  background-color: #305aad;
 }
 
 .help-icon {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .btnCardar h1 {
-    color: var(--text-color);
-    font-size: 32px;
-    text-align: center;
-    margin-top: 16px;
-    padding: 8px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
+  color: var(--text-color);
+  font-size: 32px;
+  text-align: center;
+  margin-top: 16px;
+  padding: 8px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
 }
 
 .cardText {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-color);
-    font-size: 16px;
-    text-align: center;
-    padding: 16px;
-    font-weight: 500;
-    letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  font-size: 16px;
+  text-align: center;
+  padding: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .redirect-btn {
-    background-color: var(--primary-color);
-    color: var(--text-color); /* Color de texto */
-    padding: 8px 16px; /* Tamaño del botón */
-    text-align: center; /* Centrar el texto */
-    text-decoration: none; /* Sin subrayado */
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins", sans-serif;
-    width: 100% ;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 16px; /* Tamaño de fuente */
-    letter-spacing: 2px;
-    cursor: pointer; /* Cursor de mano */
-    border: none; /* Sin borde */
-    transition: background-color 0.3s ease; /* Animación */
-    border-radius: 0 0 4px 4px;
+  background-color: var(--primary-color);
+  color: var(--text-color); /* Color de texto */
+  padding: 8px 16px; /* Tamaño del botón */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Sin subrayado */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px; /* Tamaño de fuente */
+  letter-spacing: 2px;
+  cursor: pointer; /* Cursor de mano */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s ease; /* Animación */
+  border-radius: 0 0 4px 4px;
 }
 
 .redirect-btn img {
-    margin-right: 8px; /* Espaciado entre la imagen y el texto */
-    width: 20px; /* Ancho de la imagen */
-    height: 20px; /* Alto de la imagen */
+  margin-right: 8px; /* Espaciado entre la imagen y el texto */
+  width: 20px; /* Ancho de la imagen */
+  height: 20px; /* Alto de la imagen */
 }
 
 .redirect-btn:hover {
-        opacity: .9;
-    box-shadow: 0 0 6px 5px #0092ff70;
+  opacity: 0.9;
+  box-shadow: 0 0 6px 5px #0092ff70;
 }
 
+.footer {
+  background-color: var(--plast-bg);
+  width: 100vw;
+  border-top: solid 1px var(--borderline-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section-info {
+  width: 100vw;
+  border-top: solid 1px var(--borderline-color);
+}
+.footer-section-info p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+.footer-section-important {
+  width: 60vw;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.footer-seguridad {
+  width: 280px;
+  margin-left: 0px;
+  color: var(--text-color);
+  text-align: left;
+}
+.footer-seguridad p {
+  font-size: 12px;
+}
+.footer-seguridad img {
+  width: 44px; /* Ancho de la imagen */
+  height: 44px; /* Alto de la imagen */
+  float: left; /* Alinear la imagen a la izquierda */
+  margin-right: 10px; /* Espaciado entre la imagen y el texto */
+  margin-top: 7px;
+}
+
+.footer-avisos {
+  width: 280px;
+  margin-left: 0px;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.footer-avisos p {
+  text-align: left;
+  font-size: 12px;
+}
+
+.footer-avisos img {
+  width: 44px; /* Ancho de la imagen */
+  height: 44px; /* Alto de la imagen */
+  float: left; /* Alinear la imagen a la izquierda */
+  margin-right: 10px; /* Espaciado entre la imagen y el texto */
+  margin-top: 7px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: var(--borderline-color);
+  margin: 7px 0;
+}
 
 @media (min-width: 768px) {
-    .button-container {
-        flex-direction: row; /* Alinear los botones en fila */
-        height: fit-content; /* Aumentar la altura del contenedor en pantallas más grandes */
-    }
+  body {
+    height: 100vh;
+  }
 
-    .redirect-btn {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
+  .button-container {
+    flex-direction: row; /* Alinear los botones en fila */
+    height: fit-content; /* Aumentar la altura del contenedor en pantallas más grandes */
+  }
 
-    .image-icon {
-        width: 80px;
-        height: 80px;
-    }
+  .redirect-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .image-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .redirect-btn {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
+  .redirect-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 
-    .image-icon {
-        width: 80px;
-        height: 80px;
-    }
+  .image-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0px;
+  }
 }
