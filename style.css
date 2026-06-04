@@ -14,6 +14,7 @@
   --background-color: #213555;
   --plast-bg: #061a42c3;
   --borderline-color: #1e90bac9;
+  --second-background-color: #e7fafb;
 }
 
 a:link,
@@ -55,13 +56,7 @@ p {
 ----------------------------------------------- */
 
 body {
-  background-color: var(--background-color);
-  background-image: linear-gradient(
-    160deg,
-    var(--background-color) 0%,
-    #00122b 54%,
-    var(--primary-color) 100%
-  );
+  background-color: var(--second-background-color);
   background-position:
     0 0,
     50%;
@@ -138,8 +133,8 @@ body {
   height: fit-content;
 }
 
-.hero h1 {
-  color: var(--text-color);
+.hero h3 {
+  color: var(--secondary-color);
   font-size: 48px;
   text-align: center;
   padding: 8px;
@@ -254,27 +249,10 @@ body {
   background-color: var(--plast-bg);
   width: 100vw;
   border-top: solid 1px var(--borderline-color);
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.footer-section-info {
-  width: 100vw;
-  border-top: solid 1px var(--borderline-color);
-}
-.footer-section-info p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-  color: var(--text-color);
-  font-size: 13px;
 }
 
 .footer-section-important {
@@ -286,43 +264,25 @@ body {
   justify-content: space-around;
   text-align: center;
   color: var(--text-color);
+  border-bottom: solid 1px var(--borderline-color);
 }
 
-.footer-seguridad {
-  width: 280px;
-  margin-left: 0px;
-  color: var(--text-color);
-  text-align: left;
+.footerBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    color: var(--text-color);
+    text-align: left;
 }
-.footer-seguridad p {
+.footerBox p {
   font-size: 12px;
 }
-.footer-seguridad img {
+.footerBox img {
   width: 44px; /* Ancho de la imagen */
+  margin: 8px; /* Espaciado entre la imagen y el texto */
   height: 44px; /* Alto de la imagen */
-  float: left; /* Alinear la imagen a la izquierda */
-  margin-right: 10px; /* Espaciado entre la imagen y el texto */
-  margin-top: 7px;
-}
-
-.footer-avisos {
-  width: 280px;
-  margin-left: 0px;
-  color: var(--text-color);
-  text-align: left;
-}
-
-.footer-avisos p {
-  text-align: left;
-  font-size: 12px;
-}
-
-.footer-avisos img {
-  width: 44px; /* Ancho de la imagen */
-  height: 44px; /* Alto de la imagen */
-  float: left; /* Alinear la imagen a la izquierda */
-  margin-right: 10px; /* Espaciado entre la imagen y el texto */
-  margin-top: 7px;
 }
 
 .divider {
